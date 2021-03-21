@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/ticket_graph"
+    app:startDestination="@id/ticketPagerFragment">
+
+    <fragment
+        android:id="@+id/ticketPagerFragment"
+        android:name="com.example.ticketapplicationpoc.TicketPagerFragment"
+        android:label="@string/ticket_list_title" >
+        <action
+            android:id="@+id/action_ticketPagerFragment_to_ticketDetailsFragment"
+            app:destination="@id/ticketDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ticketDetailsFragment"
+        android:name="com.example.ticketapplicationpoc.TicketDetailsFragment"
+        android:label="@string/ticket_details" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
+    </fragment>
+</navigation>

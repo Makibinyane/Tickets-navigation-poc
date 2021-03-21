@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TicketApplicationPOC</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ticket_list_title">Customer Tickets</string>
+    <string name="ticket_details">Ticket Details</string>
+</resources>
