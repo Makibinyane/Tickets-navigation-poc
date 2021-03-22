@@ -12,6 +12,9 @@ import androidx.recyclerview.widget.RecyclerView
 
 class OpenTicketFragment : Fragment() {
 
+    val tickets = arrayListOf(Ticket("Unable to login", "When using Chrome Browser to login I get 404 error"),
+        Ticket("Background Task", "The app is always running as the background task"),
+        Ticket("Create Account", "System doesn't allow my phone numbers"))
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,12 +26,6 @@ class OpenTicketFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        val tickets = ArrayList<Ticket>()
-        tickets.add(Ticket("Unable to login", "When using Chrome Browser to login I get 404 error"))
-        tickets.add(Ticket("Background Task", "The app is always running as the background task"))
-        tickets.add(Ticket("Create Account", "System doesn't allow my phone numbers"))
-
 
         val ticketAdapter = TicketAdapter { item -> handleClick(item) }
         val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
